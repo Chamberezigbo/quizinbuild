@@ -5,68 +5,28 @@
        <meta charset="UTF-8" />
        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-       <link rel="stylesheet" href="bootstrap-5.0.0-beta2-dist/css/bootstrap.min.css" />
+       <link rel="stylesheet" href="style.css" />
        <title>Document</title>
 </head>
 
 <body>
-       <div class="container mx-auto text-center mt-4">
-              <div class="badge bg-primary text-wrap" style="width: 6rem">
-                     <h1>Quiz</h1>
-              </div>
+       <div class="holder" id="holder">
+           <h1 class="center">RAD5 Quizzer 1.0 <small class="right">Point : <span id="point">0</span></small></h1>
+           <p class="center" id="question"></p>
+           <div class="center">
+               <ul>
+                   <li id="option1" onclick="checkAnswer('option1')"></li>
+                   <li id="option2" onclick="checkAnswer('option2')"></li>
+                   <li id="option3" onclick="checkAnswer('option3')"></li>
+                   <li id="option4" onclick="checkAnswer('option4')"></li>
+               </ul>
+           </div>
+           <div>
+               <button class="right" onclick="newQuestion()">Next</button>
+           </div>
        </div>
 
-       <div class="alert alert-success d-none" id="alertMassage" role="alert">
-              A simple success alert—check it out!
-       </div>
-
-       <div class="alert alert-success d-none" id="alertMassage" role="alert">
-              <h3>Terms And Condition</h3>
-              <button type="button" onclick="Agreed() ">Agree</button>
-       </div>
-
-       <!-- question section  -->
-
-       <!-- question 1 -->
-       <div class="container ques_one " id="ques_one">
-              <div class="container">
-                     <div class="row text-center">
-                            <div class="col-sm-12 mt-4">
-                                   <h2 class="text-bold">Question</h2>
-                            </div>
-                     </div>
-                     <h3 class="text-center" id="question-container">
-                            Who are the co-founders of rad5 tech hub?
-                     </h3>
-              </div>
-
-              <div class="container">
-                     <div class="row">
-                            <div class="col-sm-6 mt-5 mx-auto">
-                                   <button class="btn m-2 btn-dark btn-outline-white text-white btn-block text-uppercase"
-                                          onclick="chickAnswer('correct')" type="button">
-                                          A. Iyke & shulamite
-                                   </button>
-                                   <button class="btn m-2 btn-dark btn-outline-white text-white btn-block text-uppercase"
-                                          onclick="chickAnswer()" type="button">
-                                          B. Condor & trust
-                                   </button>
-                                   <br />
-                                   <button class="btn mt-5 m-2 btn-dark btn-outline-white text-white btn-block text-uppercase"
-                                          onclick="chickAnswer('correct')" type="button">
-                                          C. Naco & igwe
-                                   </button>
-                                   <button class="btn mt-5 m-2 btn-dark btn-outline-white text-white btn-block text-uppercase"
-                                          onclick="chickAnswer()" type="button">
-                                          D. Divine % sullivan
-                                   </button>
-                            </div>
-                     </div>
-              </div>
-       </div>
-
-       <script src="bootstrap-5.0.0-beta2-dist/js/bootstrap.bundle.js"></script>
        <script src="index.js"></script>
-</body>
+</body>   
 
 </html>
